@@ -8,6 +8,13 @@
   data-netlify="true"
   class="subscription"
 >
+  <input
+    type="hidden"
+    name="form-name"
+    value="subscription"
+    netlify-honeypot="bot-field"
+  />
+
   <label>Email: <input type="email" name="email" /></label>
   <button type="submit" class="sub_button">Subscribe</button>
 </form>
