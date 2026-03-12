@@ -1,10 +1,20 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Greeting from "../components/Greeting";
+import SubscribeForm from "../components/SubscribeForm.astro";
 const pageTitle = "Home Page";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <h2>My awesome blog subtitle</h2>
   <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+  <SubscribeForm />
 </BaseLayout>
+<style is:global>
+  .button {
+    padding: 10px;
+    background-color: aqua;
+    border-radius: 5px;
+    border: none;
+  }
+</style>
